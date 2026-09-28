@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Reveal } from "@/hooks/use-reveal";
+import nexusLogo from "@/assets/nexus-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -106,13 +107,12 @@ function TopBar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-heading text-base font-bold text-primary-foreground">
-            N
-          </span>
-          <span className="font-heading text-sm font-bold tracking-tight text-foreground sm:text-base">
-            Nexus Media Agency
-          </span>
+        <a href="#" className="flex items-center">
+          <img
+            src={nexusLogo}
+            alt="Nexus Media Agency"
+            className="h-6 w-auto sm:h-7"
+          />
         </a>
         <BookCallButton className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm" />
       </div>
