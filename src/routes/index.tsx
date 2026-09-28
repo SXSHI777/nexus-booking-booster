@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Reveal } from "@/hooks/use-reveal";
+import nexusLogo from "@/assets/nexus-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -106,13 +107,12 @@ function TopBar() {
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
-        <a href="#" className="flex items-center gap-2.5">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary font-heading text-base font-bold text-primary-foreground">
-            N
-          </span>
-          <span className="font-heading text-sm font-bold tracking-tight text-foreground sm:text-base">
-            Nexus Media Agency
-          </span>
+        <a href="#" className="flex items-center">
+          <img
+            src={nexusLogo}
+            alt="Nexus Media Agency"
+            className="h-6 w-auto sm:h-7"
+          />
         </a>
         <BookCallButton className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm" />
       </div>
@@ -126,11 +126,11 @@ function Hero() {
       {/* Warm glow accents */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -top-32 left-1/2 h-[480px] w-[720px] -translate-x-1/2 rounded-full bg-primary/15 blur-[140px]"
+        className="pointer-events-none absolute -top-32 left-1/2 h-[480px] w-[720px] -translate-x-1/2 rounded-full bg-primary/20 blur-[140px]"
       />
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute right-[-10%] top-1/2 h-[320px] w-[320px] rounded-full bg-accent/10 blur-[120px]"
+        className="pointer-events-none absolute right-[-10%] top-1/2 h-[320px] w-[320px] rounded-full bg-primary/10 blur-[120px]"
       />
       <div className="relative mx-auto max-w-3xl px-4 text-center sm:px-6">
         <Reveal>
@@ -680,13 +680,12 @@ function Footer() {
   return (
     <footer className="border-t border-border py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 sm:flex-row sm:px-6">
-        <div className="flex items-center gap-2.5">
-          <span className="flex h-7 w-7 items-center justify-center rounded-lg bg-primary font-heading text-sm font-bold text-primary-foreground">
-            N
-          </span>
-          <span className="font-heading text-sm font-bold text-foreground">
-            Nexus Media Agency
-          </span>
+        <div className="flex items-center">
+          <img
+            src={nexusLogo}
+            alt="Nexus Media Agency"
+            className="h-6 w-auto opacity-90"
+          />
         </div>
         <div className="flex flex-col items-center gap-2 text-sm text-muted-foreground sm:flex-row sm:gap-6">
           <a
