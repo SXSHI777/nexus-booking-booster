@@ -6,33 +6,34 @@ import nexusLogo from "@/assets/nexus-logo.png";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      {
-        title: "Nexus Media Agency — Email Marketing for Coaches & Consultants",
-      },
+      { title: "Nexus Media Agency | Email Marketing for Shopify Supplement Brands" },
       {
         name: "description",
         content:
-          "We build the email systems that welcome new leads, build trust, and get them on your calendar ready to buy. For coaches, consultants, and agency owners.",
+          "We build the welcome, abandoned cart and post-purchase emails that turn first-time buyers into repeat customers. For Shopify supplement brands.",
       },
       {
         property: "og:title",
-        content: "Nexus Media Agency — Turn your email list into booked calls",
+        content: "Nexus Media Agency | Email Marketing for Shopify Supplement Brands",
       },
       {
         property: "og:description",
         content:
-          "Email systems that welcome new leads, build trust, and fill your calendar. Built for coaches, consultants, and agency owners.",
+          "We build the welcome, abandoned cart and post-purchase emails that turn first-time buyers into repeat customers. For Shopify supplement brands.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:url", content: "/" },
-      { name: "twitter:title", content: "Nexus Media Agency — Email Marketing" },
+      { property: "og:url", content: "https://nexus-booking-booster.lovable.app/" },
+      {
+        name: "twitter:title",
+        content: "Nexus Media Agency | Email Marketing for Shopify Supplement Brands",
+      },
       {
         name: "twitter:description",
         content:
-          "Email systems that welcome new leads, build trust, and fill your calendar.",
+          "We build the welcome, abandoned cart and post-purchase emails that turn first-time buyers into repeat customers. For Shopify supplement brands.",
       },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://nexus-booking-booster.lovable.app/" }],
   }),
   component: Index,
 });
@@ -136,20 +137,19 @@ function Hero() {
         <Reveal>
           <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-4 py-1.5 text-xs font-medium text-muted-foreground">
             <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-            Email marketing for coaches, consultants & agency owners
+            Email marketing for Shopify supplement brands
           </span>
         </Reveal>
         <Reveal delay={100}>
           <h1 className="mt-6 text-4xl font-extrabold leading-[1.1] text-foreground sm:text-6xl">
-            Turn your email list into{" "}
-            <span className="text-primary">booked calls.</span>
+            Turn first-time buyers into{" "}
+            <span className="text-primary">monthly customers.</span>
           </h1>
         </Reveal>
         <Reveal delay={200}>
           <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-            We build the email systems that welcome new leads, build trust, and get
-            them on your calendar ready to buy. For coaches, consultants, and agency
-            owners.
+            We build the email flows that welcome new subscribers, bring back abandoned
+            carts and get customers reordering. For Shopify supplement brands.
           </p>
         </Reveal>
         <Reveal delay={300}>
@@ -159,7 +159,7 @@ function Hero() {
               href="#contact"
               className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground transition-colors hover:text-primary"
             >
-              Get a free email breakdown
+              Get a free email audit
               <svg
                 width="14"
                 height="14"
@@ -200,8 +200,8 @@ const PAIN_POINTS = [
         <path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
       </svg>
     ),
-    title: "Leads sign up, then go quiet",
-    body: "Someone opts in, pokes around, and disappears — because nothing arrives to keep the conversation going.",
+    title: "Subscribers sign up, then hear nothing",
+    body: "They grab the discount code and never get a reason to use it.",
   },
   {
     icon: (
@@ -220,8 +220,8 @@ const PAIN_POINTS = [
         <path d="M12 6v6l-2.5 2.5" />
       </svg>
     ),
-    title: "Booked calls don't show up",
-    body: "Prospects book, then no-show — because they arrive at the call cold, unconvinced, and easy to postpone.",
+    title: "Carts get left behind",
+    body: "Shoppers add a product, leave, and no reminder ever arrives.",
   },
   {
     icon: (
@@ -240,8 +240,8 @@ const PAIN_POINTS = [
         <path d="M8 9h8M8 13h5" />
       </svg>
     ),
-    title: "Emails sound generic",
-    body: "Template copy that could have come from anyone — so readers skim it, ignore it, and forget who sent it.",
+    title: "First orders never turn into second orders",
+    body: "Nothing goes out after the purchase, so customers forget to reorder.",
   },
 ];
 
@@ -251,8 +251,8 @@ function WhyLeadsGoCold() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           kicker="The problem"
-          title="Why leads go cold"
-          intro="You're doing the hard part — getting people interested. But interest fades fast without the right emails behind it."
+          title="Where supplement brands lose sales"
+          intro="You've done the hard part: getting people to your store. Without the right emails behind it, most of them never come back."
         />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {PAIN_POINTS.map((point, i) => (
@@ -278,16 +278,16 @@ function WhyLeadsGoCold() {
 
 const SERVICES = [
   {
-    title: "Email audit",
-    body: "We review your current emails and list setup, then show you exactly where leads are slipping away and what to fix first.",
+    title: "Free email audit",
+    body: "We sign up to your list, shop your store and show you exactly which emails are missing, with a mockup of the first one we'd add.",
   },
   {
-    title: "Sequences written for you",
-    body: "Welcome, nurture, and re-engagement sequences written in your voice — so every new lead gets the same well-rehearsed conversation.",
+    title: "Flows written and designed for your brand",
+    body: "Welcome, abandoned cart and post-purchase emails in your brand's voice, colours and products.",
   },
   {
-    title: "Setup and optimization",
-    body: "We load everything into your email platform, connect it to your booking link, and keep refining based on how your list actually behaves.",
+    title: "Built in Klaviyo and refined",
+    body: "We set everything up, test it and keep improving it based on results.",
   },
 ];
 
@@ -297,7 +297,7 @@ function WhatWeDo() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           kicker="What we do"
-          title="An email system, built end to end"
+          title="The emails that bring customers back"
         />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {SERVICES.map((service, i) => (
@@ -323,20 +323,20 @@ function WhatWeDo() {
 
 const STEPS = [
   {
-    title: "Book a discovery call",
-    body: "A free 30-minute call to understand your business, your leads, and where your email marketing stands today.",
+    title: "Get your free audit",
+    body: "We review your store and list, then show you which emails are missing.",
   },
   {
-    title: "We audit your current setup",
-    body: "We dig into your list, existing emails, and booking flow, and map out exactly what's missing and what's possible.",
+    title: "A 30-minute call to go through it",
+    body: "We walk you through the audit and agree on what to build first.",
   },
   {
-    title: "We write your sequences",
-    body: "Welcome, nurture, and follow-up emails drafted in your voice and shared with you for review and approval.",
+    title: "We build your flows",
+    body: "Your welcome, abandoned cart and post-purchase flows, live in about 3 weeks.",
   },
   {
-    title: "We launch and optimize",
-    body: "Everything goes live, connected to your calendar — then we monitor results and keep tightening the system.",
+    title: "Launch, then refine",
+    body: "Everything goes live, then we keep improving it based on results.",
   },
 ];
 
@@ -346,7 +346,7 @@ function HowItWorks() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           kicker="How it works"
-          title="From first call to a system that sells"
+          title="From free audit to live flows"
         />
         <div className="mx-auto mt-14 max-w-3xl">
           <ol className="relative space-y-0">
@@ -387,39 +387,35 @@ function SampleWork() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           kicker="Sample work"
-          title="The same lead, two very different emails"
-          intro="A before-and-after example of the kind of rewrite we do. This is a sample for illustration — not a client's email."
+          title="The same abandoned cart, two very different emails"
+          intro="A before-and-after abandoned cart email for a fictional supplement brand, Peak Daily. This is an illustrative example, not a client's email."
         />
         <div className="mt-14 grid items-stretch gap-6 lg:grid-cols-[1fr_auto_1fr]">
           <Reveal>
             <article className="flex h-full flex-col rounded-2xl border border-border bg-card p-6 sm:p-8">
               <div className="flex items-center justify-between gap-3">
                 <span className="rounded-full border border-border px-3 py-1 text-xs font-semibold uppercase tracking-wider text-muted-foreground">
-                  Before — typical email
+                  Before — default Shopify reminder
                 </span>
               </div>
               <div className="mt-5 space-y-3 border-b border-border pb-5">
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-medium text-foreground">Subject:</span> Just
-                  checking in
+                  <span className="font-medium text-foreground">Subject:</span> You left
+                  something in your cart
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-medium text-foreground">From:</span> you@yourbusiness.com
+                  <span className="font-medium text-foreground">From:</span> no-reply@peakdaily.com
                 </p>
               </div>
               <div className="mt-5 flex-1 space-y-3 text-sm leading-relaxed text-muted-foreground">
-                <p>Hi [Name],</p>
-                <p>
-                  I wanted to reach out and see if you had any questions about working
-                  together. I'd love to hop on a call sometime and chat about how we can
-                  help you grow.
-                </p>
-                <p>Let me know if you're interested!</p>
-                <p>Thanks,</p>
-                <p>[Your name]</p>
+                <p>Hi there,</p>
+                <p>You left something in your cart.</p>
+                <p>Magnesium Glycinate — 1 × $34.00</p>
+                <p>Complete your purchase: [Return to cart]</p>
+                <p>Peak Daily</p>
               </div>
               <p className="mt-6 border-t border-border pt-4 text-xs italic text-muted-foreground">
-                No reason to reply, no value delivered, easy to ignore.
+                Plain, unbranded and gives no reason to come back.
               </p>
             </article>
           </Reveal>
@@ -448,41 +444,38 @@ function SampleWork() {
               </div>
               <div className="mt-5 space-y-3 border-b border-border pb-5">
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-medium text-foreground">Subject:</span> The 3
-                  questions I ask before hiring anyone
+                  <span className="font-medium text-foreground">Subject:</span> Your
+                  better night's sleep is still waiting
                 </p>
                 <p className="text-sm text-muted-foreground">
-                  <span className="font-medium text-foreground">From:</span> you@yourbusiness.com
+                  <span className="font-medium text-foreground">From:</span> Peak Daily
                 </p>
               </div>
               <div className="mt-5 flex-1 space-y-3 text-sm leading-relaxed text-muted-foreground">
-                <p>Hi [Name],</p>
+                <p className="font-medium text-foreground">Peak Daily · Magnesium Glycinate</p>
                 <p>
-                  Before anyone hires me, I ask them the same three questions. Most
-                  people get them wrong — and it's costing them clients.
+                  One scoop before bed to help you unwind, sleep deeper and wake up
+                  without the grogginess.
+                </p>
+                <p className="italic">
+                  "I fall asleep faster and actually feel rested in the morning." — Sarah,
+                  verified buyer
                 </p>
                 <p>
-                  1. Where did your last five leads come from?
-                  <br />
-                  2. What do they say "no" to?
-                  <br />
-                  3. What happens after they say "yes"?
+                  <span className="inline-block rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground">
+                    Finish my order
+                  </span>
                 </p>
-                <p>
-                  If you want, hit reply and I'll tell you how you scored. Or grab a
-                  time on my calendar and we'll go through it together.
-                </p>
-                <p>[Your name]</p>
               </div>
               <p className="mt-6 border-t border-border pt-4 text-xs italic text-muted-foreground">
-                Delivers value, starts a conversation, points straight at the calendar.
+                Branded, shows the product, gives a reason to buy and one clear next step.
               </p>
             </article>
           </Reveal>
         </div>
         <Reveal delay={200}>
           <p className="mt-6 text-center text-xs text-muted-foreground">
-            Sample emails shown for illustration only.
+            Illustrative example for a fictional brand. Not a client's email.
           </p>
         </Reveal>
       </div>
@@ -492,16 +485,16 @@ function SampleWork() {
 
 const AUDIENCES = [
   {
-    title: "Coaches",
-    body: "You sell transformation, and that takes trust. Your emails do the trust-building between the opt-in and the call.",
+    title: "No welcome series yet",
+    body: "New subscribers get a discount code and then silence. We give them a reason to place that first order.",
   },
   {
-    title: "Consultants",
-    body: "Your expertise is the product. We turn your thinking into emails that prove it before anyone gets on a call.",
+    title: "Cart reminder, nothing after",
+    body: "You recover some carts, but customers buy once and drift away. We add the emails that get them reordering.",
   },
   {
-    title: "Agency owners",
-    body: "You don't have hours to write emails. We run the system so every lead you generate gets followed up — without you.",
+    title: "Founders who'd rather not write emails",
+    body: "You'd rather spend your time on product and growth. We write, design and run the flows for you.",
   },
 ];
 
@@ -511,7 +504,7 @@ function WhoItsFor() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <SectionHeading
           kicker="Who it's for"
-          title="Built for people who sell expertise"
+          title="Built for growing Shopify supplement brands"
         />
         <div className="mt-14 grid gap-6 md:grid-cols-3">
           {AUDIENCES.map((audience, i) => (
@@ -539,7 +532,7 @@ function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`Free email breakdown request — ${name}`);
+    const subject = encodeURIComponent("Free email audit request");
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\nWebsite: ${website}\n\nMessage:\n${message}`
     );
@@ -562,12 +555,11 @@ function ContactSection() {
             <div>
               <span className="section-kicker">Get started</span>
               <h2 className="mt-3 text-3xl font-bold leading-tight text-foreground sm:text-4xl">
-                Ready to turn your list into booked calls?
+                Want to see what your emails are missing?
               </h2>
               <p className="mt-5 max-w-md text-base leading-relaxed text-muted-foreground">
-                Book a free 30-minute call, or send us a note and we'll give you a
-                free breakdown of what your emails should be doing — no strings
-                attached.
+                Book a free 30-minute call, or send your store link and we'll send you a
+                free email audit.
               </p>
               <div className="mt-8">
                 <BookCallButton className="px-8 py-3.5 text-base" />
@@ -581,10 +573,10 @@ function ContactSection() {
               className="rounded-2xl border border-border bg-card p-6 sm:p-8"
             >
               <h3 className="font-heading text-lg font-semibold text-foreground">
-                Get a free email breakdown
+                Get a free email audit
               </h3>
               <p className="mt-1.5 text-sm text-muted-foreground">
-                Tell us a little about your business.
+                Tell us a little about your store.
               </p>
               <div className="mt-6 space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -652,7 +644,7 @@ function ContactSection() {
                     required
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                    placeholder="What are you trying to fix with your emails?"
+                    placeholder="Your store URL and anything you'd like us to look at"
                     className={`${inputClasses} resize-none`}
                   />
                 </div>
